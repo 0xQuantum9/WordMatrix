@@ -13,12 +13,11 @@ def get_items(prompt_text):
     return items
 
 def get_numbers_range():
-    print("\n[+] Enter Numbers Range:")
+    print("\n[+] Enter Numbers Range (Optional, press Enter to skip):")
     start_str = input("    Enter Start Number (e.g., 1): ").strip()
     end_str = input("    Enter End Number (e.g., 3): ").strip()
 
     if not start_str.isdigit() or not end_str.isdigit():
-        print("    [!] Invalid range, using empty numbers list.")
         return []
 
     start = int(start_str)
@@ -27,7 +26,17 @@ def get_numbers_range():
     if start > end:
         start, end = end, start
 
-    numbers = [str(n) for n in range(start, end + 1)]
+    return [str(n) for n in range(start, end + 1)]
+
+def get_custom_numbers():
+    print("\n[+] Enter Specific Numbers, Dates, or Phone Numbers:")
+    print("    (e.g., 01012345678, 1998, 2024, 050 - Press Enter on empty line to finish)")
+    numbers = []
+    while True:
+        value = input(f"    {len(numbers) + 1}> ").strip()
+        if not value:
+            break
+        numbers.append(value)
     return numbers
 
 def expand_word_cases(word):
@@ -59,7 +68,11 @@ def main():
     print("=" * 60)
 
     words = get_items("Enter words (e.g., adam):")
-    numbers = get_numbers_range()
+    
+    range_numbers = get_numbers_range()
+    custom_numbers = get_custom_numbers()
+    numbers = list(set(range_numbers + custom_numbers))
+
     symbols = get_items("Enter symbols (e.g., @, #, !):")
 
     print("\n" + "-" * 60)
