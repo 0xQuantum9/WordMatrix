@@ -55,16 +55,7 @@ Press **Enter on an empty line** when you are finished.
     3>
 ```
 
-### 3. Enter Dates
-
-```text
-[+] Enter dates
-    1> 1995
-    2> 2026
-    3>
-```
-
-### 4. Enter Symbols
+### 3. Enter Symbols
 
 ```text
 [+] Enter symbols
@@ -74,7 +65,7 @@ Press **Enter on an empty line** when you are finished.
     4>
 ```
 
-### 5. Set Maximum Depth
+### 4. Set Maximum Depth
 
 ```text
 Enter max depth [Default: 3]:
