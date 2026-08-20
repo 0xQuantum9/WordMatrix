@@ -6,8 +6,6 @@
 
 **Eternyx** is a lightweight and customizable Wordlist Generator designed to create large sets of combinations from **words, numbers, dates, and symbols** provided by the user.
 
----
-
 ## ✨ Features
 
 * ♾️ **Combination Generation**
