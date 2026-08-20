@@ -46,11 +46,21 @@ def expand_word_cases(word):
             cases.add("".join(p))
     return list(cases)
 
+def leet_transform(word):
+    map_dict = {'a': ['4', '@'], 'e': ['3'], 'i': ['1', '!'], 'o': ['0'], 's': ['5', '$'], 't': ['7']}
+    variations = {word}
+    chars = [map_dict.get(c.lower(), [c]) + [c] for c in word]
+    for p in itertools.product(*chars):
+        variations.add("".join(p))
+    return list(variations)
+
 def generate_brute_force(words, numbers, symbols, max_depth=4):
     expanded_words = []
     for w in words:
         expanded_words.extend(expand_word_cases(w))
-
+        expanded_words.extend(leet_transform(w))
+    
+    expanded_words = list(set(expanded_words))
     digits = set("".join(numbers))
     pool = set(expanded_words + numbers + symbols + list(digits))
 
@@ -59,12 +69,11 @@ def generate_brute_force(words, numbers, symbols, max_depth=4):
 
     for length in range(1, max_depth + 1):
         for combo in itertools.product(pool, repeat=length):
-            result = "".join(combo)
-            yield result
+            yield "".join(combo)
 
 def main():
     print("=" * 60)
-    print("       ULTIMATE BRUTE-FORCE COMBINATION GENERATOR V3")
+    print("        ULTIMATE BRUTE-FORCE COMBINATION GENERATOR V4")
     print("=" * 60)
 
     words = get_items("Enter words (e.g., adam):")
@@ -77,9 +86,8 @@ def main():
 
     print("\n" + "-" * 60)
     print("Set maximum combination depth.")
-    print("Note: Depth 3-4 covers most patterns like 'adamadam20' or '00adam'.")
-    depth_input = input("Enter max depth [Default: 3]: ").strip()
-    max_depth = int(depth_input) if depth_input.isdigit() else 3
+    depth_input = input("Enter max depth [Default: 4]: ").strip()
+    max_depth = int(depth_input) if depth_input.isdigit() else 4
 
     print("\n[+] Generating all absolute possibilities... Please wait.\n")
 
