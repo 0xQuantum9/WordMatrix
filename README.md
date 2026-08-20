@@ -49,10 +49,9 @@ Press **Enter on an empty line** when you are finished.
 ### 2. Enter Numbers
 
 ```text
-[+] Enter numbers
-    1> 2
-    2> 20
-    3>
+[+] Enter numbers Range:
+    Enter Start Number (e.g., 1): 
+    Enter End Number (e.g., 3): 
 ```
 
 ### 3. Enter Symbols
