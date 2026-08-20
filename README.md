@@ -73,7 +73,7 @@ cd eternyx
 Run the generator:
 
 ```bash
-python eternyx.py
+python Eternyx.py
 ```
 
 Eternyx uses only Python's standard library, so no external dependencies are required.
@@ -85,7 +85,7 @@ Eternyx uses only Python's standard library, so no external dependencies are req
 Start Eternyx:
 
 ```bash
-python eternyx.py
+python Eternyx.py
 ```
 
 The program will interactively ask you for different types of input.
@@ -137,37 +137,6 @@ Enter max depth [Default: 3]:
 
 If you simply press **Enter**, Eternyx uses a default depth of `3`.
 
----
-
-## ⚙️ How It Works
-
-Eternyx processes your input through several stages:
-
-```text
-┌───────────────┐
-│     Input     │
-│ Words / Data  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│  Case Expand  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Build Pool    │
-│ Words / Digits│
-│ Dates / Symbols│
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Combination   │
-│    Engine     │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│  output.txt   │
-└───────────────┘
-```
 
 Words are first expanded into multiple case variations.
 
@@ -200,56 +169,6 @@ Increasing the depth can increase the number of generated combinations **extreme
 
 > ⚠️ Higher depths can produce very large output files and may require significant processing time and disk space.
 
----
-
-## 📄 Output
-
-All generated combinations are saved to:
-
-```text
-output.txt
-```
-
-Example:
-
-```text
-adam
-Adam
-ADAM
-aDaM
-adam20
-20adam
-adam@
-@adam
-...
-```
-
-During generation, Eternyx periodically displays progress:
-
-```text
-Generated 200,000 combinations...
-Generated 400,000 combinations...
-Generated 600,000 combinations...
-```
-
-When finished:
-
-```text
-============================================================
-[SUCCESS] Total combinations generated: 600,000
-[SUCCESS] Saved to: output.txt
-============================================================
-```
-
----
-
-## 🛠️ Requirements
-
-* Python 3.x
-* Standard Python library
-* No external dependencies
-
----
 
 ## 🎯 Use Cases
 
@@ -264,45 +183,6 @@ Eternyx can be useful for legitimate purposes such as:
 
 > **Use Eternyx only with systems, accounts, and data that you own or have explicit permission to test.**
 
----
-
-## 🌌 The Philosophy
-
-The name **Eternyx** is inspired by the idea of **eternity and limitless possibilities**.
-
-As the number of inputs and generation depth increases, the number of possible combinations can grow dramatically.
-
-> **One Input. Infinite Possibilities.**
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome.
-
-Feel free to submit:
-
-* Bug reports
-* Feature requests
-* Performance improvements
-* Documentation improvements
-* Pull requests
-
-Help make **Eternyx** faster, cleaner, and more powerful.
-
----
-
-## 📜 License
-
-This project is released under the license included in this repository.
-
----
-
-<div align="center">
-
-# ♾️ ETERNYX
-
-### **One Input. Infinite Possibilities.**
 
 **Generate • Combine • Expand**
 
