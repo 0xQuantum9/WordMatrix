@@ -12,6 +12,24 @@ def get_items(prompt_text):
         items.append(value)
     return items
 
+def get_numbers_range():
+    print("\n[+] Enter Numbers Range:")
+    start_str = input("    Enter Start Number (e.g., 1): ").strip()
+    end_str = input("    Enter End Number (e.g., 3): ").strip()
+
+    if not start_str.isdigit() or not end_str.isdigit():
+        print("    [!] Invalid range, using empty numbers list.")
+        return []
+
+    start = int(start_str)
+    end = int(end_str)
+
+    if start > end:
+        start, end = end, start
+
+    numbers = [str(n) for n in range(start, end + 1)]
+    return numbers
+
 def expand_word_cases(word):
     cases = {word, word.lower(), word.upper(), word.capitalize()}
     if len(word) <= 5:
@@ -19,16 +37,14 @@ def expand_word_cases(word):
             cases.add("".join(p))
     return list(cases)
 
-def generate_brute_force(words, numbers, dates, symbols, max_depth=4):
-
+def generate_brute_force(words, numbers, symbols, max_depth=4):
     expanded_words = []
     for w in words:
         expanded_words.extend(expand_word_cases(w))
 
-    digits = set("".join(numbers + dates))
-    
-    pool = set(expanded_words + numbers + dates + symbols + list(digits))
-    
+    digits = set("".join(numbers))
+    pool = set(expanded_words + numbers + symbols + list(digits))
+
     if not pool:
         return
 
@@ -43,8 +59,7 @@ def main():
     print("=" * 60)
 
     words = get_items("Enter words (e.g., adam):")
-    numbers = get_items("Enter numbers (e.g., 2, 0, 20):")
-    dates = get_items("Enter dates (e.g., 1995, 2026):")
+    numbers = get_numbers_range()
     symbols = get_items("Enter symbols (e.g., @, #, !):")
 
     print("\n" + "-" * 60)
@@ -57,7 +72,7 @@ def main():
 
     count = 0
     with open("output.txt", "w", encoding="utf-8") as file:
-        for result in generate_brute_force(words, numbers, dates, symbols, max_depth):
+        for result in generate_brute_force(words, numbers, symbols, max_depth):
             file.write(result + "\n")
             count += 1
             if count % 200000 == 0:
