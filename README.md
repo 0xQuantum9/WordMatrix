@@ -1,36 +1,36 @@
-# ♾️ Eternyx
+# ♾️ WordMatrix
 
 ### The Infinite Wordlist Generator
 
 > **Generate. Combine. Expand.**
 
-**Eternyx** is a lightweight and customizable Wordlist Generator designed to create large sets of combinations from **words, numbers, dates, and symbols** provided by the user.
+**WordMatrix** is a lightweight and customizable Wordlist Generator designed to create large sets of combinations from **words, numbers, dates, and symbols** provided by the user.
 
 ## 🚀 Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/0xQuantum9/Eternyx
-cd Eternyx
+git clone https://github.com/0xQuantum9/WordMatrix
+cd WordMatrix
 ```
 
 Run the generator:
 
 ```bash
-python Eternyx.py
+python WordMatrix.py
 ```
 
-Eternyx uses only Python's standard library, so no external dependencies are required.
+WordMatrix uses only Python's standard library, so no external dependencies are required.
 
 ---
 
 ## 🖥️ Usage
 
-Start Eternyx:
+Start WordMatrix:
 
 ```bash
-python Eternyx.py
+python WordMatrix.py
 ```
 
 The program will interactively ask you for different types of input.
@@ -40,7 +40,7 @@ The program will interactively ask you for different types of input.
 ```text
 [+] Enter words
     1> adam
-    2> eternyx
+    2> WordMatrix
     3>
 ```
 
@@ -80,12 +80,12 @@ Press **Enter on an empty line** when you are finished.
 Enter max depth [Default: 3]:
 ```
 
-If you simply press **Enter**, Eternyx uses a default depth of `3`.
+If you simply press **Enter**, WordMatrix uses a default depth of `3`.
 
 
 Words are first expanded into multiple case variations.
 
-Eternyx then builds a generation pool from:
+WordMatrix then builds a generation pool from:
 
 * Expanded words
 * Numbers
@@ -117,7 +117,7 @@ Increasing the depth can increase the number of generated combinations **extreme
 
 ## 🎯 Use Cases
 
-Eternyx can be useful for legitimate purposes such as:
+WordMatrix can be useful for legitimate purposes such as:
 
 * 🧪 Custom dictionary testing
 * 🔬 Research and experimentation
@@ -126,7 +126,7 @@ Eternyx can be useful for legitimate purposes such as:
 * 📚 Custom word collection generation
 * 🤖 Automation workflows
 
-> **Use Eternyx only with systems, accounts, and data that you own or have explicit permission to test.**
+> **Use WordMatrix only with systems, accounts, and data that you own or have explicit permission to test.**
 
 
 **Generate • Combine • Expand**
