@@ -63,7 +63,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/0xQuantum9/Eternyx
-cd eternyx
+cd Eternyx
 ```
 
 Run the generator:
