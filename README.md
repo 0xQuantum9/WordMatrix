@@ -54,7 +54,15 @@ Press **Enter on an empty line** when you are finished.
     Enter End Number (e.g., 3): 
 ```
 
-### 3. Enter Symbols
+### 3. Enter Specific Numbers
+
+```text
+[+] Enter numbers Range:
+    1> 2026
+    2> 142952952
+```
+
+### 4. Enter Symbols
 
 ```text
 [+] Enter symbols
@@ -64,7 +72,7 @@ Press **Enter on an empty line** when you are finished.
     4>
 ```
 
-### 4. Set Maximum Depth
+### 5. Set Maximum Depth
 
 ```text
 Enter max depth [Default: 3]:
