@@ -66,7 +66,7 @@ Eternyx uses a combination-based generation engine with automatic **case expansi
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/eternyx.git
+git clone https://github.com/0xQuantum9/Eternyx
 cd eternyx
 ```
 
