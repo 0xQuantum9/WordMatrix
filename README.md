@@ -6,57 +6,6 @@
 
 **Eternyx** is a lightweight and customizable Wordlist Generator designed to create large sets of combinations from **words, numbers, dates, and symbols** provided by the user.
 
-## ✨ Features
-
-* ♾️ **Combination Generation**
-
-  * Generate a large number of combinations from your custom inputs.
-
-* 🔤 **Smart Case Expansion**
-
-  * Automatically generate multiple case variations:
-
-    ```text
-    adam
-    Adam
-    ADAM
-    aDaM
-    ```
-
-* 🔢 **Numbers & Dates**
-
-  * Add custom numbers and dates to the generation pool.
-
-* 🔣 **Custom Symbols**
-
-  * Include symbols such as:
-
-    ```text
-    @  #  !  $  %
-    ```
-
-* 🎚️ **Custom Generation Depth**
-
-  * Control the maximum combination depth.
-
-* 📄 **Automatic Output**
-
-  * Results are automatically saved to:
-
-    ```text
-    output.txt
-    ```
-
-* ⚡ **Memory-Efficient Writing**
-
-  * Generated results are written directly to the output file instead of keeping the entire list in memory.
-
-* 📊 **Live Progress**
-
-  * Displays generation progress while Eternyx is running.
-
----
-
 ## 🚀 Installation
 
 Clone the repository:
